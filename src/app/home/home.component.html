@@ -1,0 +1,18 @@
+<br/>
+<div class="form-group">
+  <input type="text" class="form-control" id="city" placeholder="Enter city name for weather report"><br/>
+  <input type="submit" class="btn-primary" value="Search City">
+</div>
+<br/>
+<div class="row .justify-content-center">
+  <div *ngFor="let report of reports">
+    <div class="card" style="width: 17rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{report.city}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{report.temp}}° C | {{report.forecast}}</h6>
+        <p class="card-text">{{report.summary}}</p>
+        <a href="#" class="card-link">Detailed report</a>
+      </div>
+    </div>
+  </div>
+</div>
